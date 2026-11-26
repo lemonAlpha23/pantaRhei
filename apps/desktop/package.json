@@ -1,0 +1,62 @@
+{
+  "name": "@pantarhei/desktop",
+  "version": "0.2.10",
+  "private": true,
+  "type": "module",
+  "description": "Panta Rhei 本地行情工作台",
+  "author": "Panta Rhei",
+  "main": "dist/main/index.cjs",
+  "scripts": {
+    "dev": "uv sync --directory ../backend --locked --inexact && electron-vite dev --watch",
+    "dev:web": "uv sync --directory ../backend --locked --inexact && vite --config web.vite.config.ts",
+    "check": "vue-tsc --noEmit && tsc -p tsconfig.node.json --noEmit",
+    "test": "node --experimental-strip-types --test \"renderer/tests/*.test.mts\" \"tests/*.test.mts\"",
+    "build": "pnpm run check && electron-vite build",
+    "package": "pnpm run build && node scripts/freeze.mjs && electron-builder --publish never"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@vitejs/plugin-vue": "^6.0.11",
+    "electron": "45.5.0",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "lightweight-charts": "^5.3.0",
+    "lucide-vue-next": "0.577.0",
+    "naive-ui": "^2.45.3",
+    "pinia": "^3.0.4",
+    "sass": "^1.108.2",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.8",
+    "vue": "^3.5.46",
+    "vue-tsc": "^3.3.14"
+  },
+  "build": {
+    "appId": "com.pantarhei.terminal",
+    "productName": "Panta Rhei",
+    "directories": {
+      "output": "../../release"
+    },
+    "files": [
+      "dist/main/**/*",
+      "dist/preload/**/*",
+      "dist/renderer/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "dist/service/market-service",
+        "to": "service"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.finance"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Finance"
+    }
+  }
+}

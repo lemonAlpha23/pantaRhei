@@ -1,0 +1,84 @@
+:root {
+  color-scheme: light;
+  --bg: #fff;
+  --surface: #fff;
+  --soft: #f7f8fa;
+  --line: #dee1e6;
+  --line-soft: #eef0f3;
+  --text: #0a0b0d;
+  --muted: #5b616e;
+  --dim: #646d79;
+  --primary: #0052ff;
+  --primary-active: #003ecc;
+  --primary-soft: #edf3ff;
+  --up: #bc3042;
+  --down: #08794f;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font: 15px/1.5 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei UI", sans-serif;
+  font-synthesis: none;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+h1, h2, h3, p, dl, dd { margin: 0; }
+h2 { font-size: 20px; font-weight: 600; line-height: 1.4; letter-spacing: -.035em; }
+button, input { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button {
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: color .16s ease, border-color .16s ease, background-color .16s ease;
+  &:disabled { opacity: .46; cursor: default; }
+}
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+svg { flex-shrink: 0; stroke-width: 1.8; }
+::selection { background: #d8e4ff; }
+kbd { font: 11px/1.4 var(--mono); color: var(--dim); }
+.mono { font-variant-numeric: tabular-nums; }
+.up { color: var(--up) !important; }
+.down { color: var(--down) !important; }
+.flat { color: var(--muted); }
+
+.panel { min-width: 0; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+.action, .icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border-radius: 100px;
+  line-height: 1;
+}
+.action {
+  padding: 0 16px;
+  min-height: 38px;
+  background: var(--soft);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 550;
+  &:hover:not(:disabled) { background: var(--line-soft); }
+  &.primary {
+    color: white;
+    background: var(--primary);
+    &:hover:not(:disabled) { background: var(--primary-active); }
+  }
+}
+.icon-button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: var(--muted);
+  &:hover:not(:disabled) { background: var(--line-soft); color: var(--text); }
+}
+.empty {
+  display: grid; justify-items: center; align-content: center; gap: 12px;
+  padding: 35px 18px; color: var(--muted); text-align: center;
+  strong { color: var(--text); font-size: 15px; font-weight: 550; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

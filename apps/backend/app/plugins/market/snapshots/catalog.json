@@ -1,0 +1,106 @@
+{
+  "source": "腾讯自选股",
+  "sourceUrlTemplate": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param={ticker},day,,,640,qfq",
+  "capturedAt": "2026-11-26T08:52:38+08:00",
+  "adjustment": "前复权",
+  "volumeUnit": "股",
+  "sourceVolumeUnit": "手（每手 100 股）",
+  "instruments": [
+    {
+      "symbol": "600519",
+      "name": "贵州茅台",
+      "exchange": "SSE",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "sector": "白酒"
+    },
+    {
+      "symbol": "300750",
+      "name": "宁德时代",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "sector": "电池"
+    },
+    {
+      "symbol": "601318",
+      "name": "中国平安",
+      "exchange": "SSE",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "sector": "保险"
+    },
+    {
+      "symbol": "600036",
+      "name": "招商银行",
+      "exchange": "SSE",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "sector": "银行"
+    },
+    {
+      "symbol": "000858",
+      "name": "五粮液",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "sector": "白酒"
+    },
+    {
+      "symbol": "002594",
+      "name": "比亚迪",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "sector": "汽车整车"
+    },
+    {
+      "symbol": "000001",
+      "name": "平安银行",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "sector": "银行"
+    },
+    {
+      "symbol": "000333",
+      "name": "美的集团",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "sector": "家用电器"
+    },
+    {
+      "symbol": "600276",
+      "name": "恒瑞医药",
+      "exchange": "SSE",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "sector": "医药"
+    },
+    {
+      "symbol": "600900",
+      "name": "长江电力",
+      "exchange": "SSE",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "sector": "电力"
+    },
+    {
+      "symbol": "601899",
+      "name": "紫金矿业",
+      "exchange": "SSE",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "sector": "有色金属"
+    },
+    {
+      "symbol": "300059",
+      "name": "东方财富",
+      "exchange": "SZSE",
+      "currency": "CNY",
+      "timezone": "Asia/Shanghai",
+      "sector": "证券"
+    }
+  ]
+}
